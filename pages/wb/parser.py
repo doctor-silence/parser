@@ -44,7 +44,7 @@ class Client:
     
     def parse_page(self, text: str):
         soup = bs4.BeautifulSoup(text, 'lxml')
-        container = soup.select('div.product-card j-card-item j-good-for-listing-event')
+        container = soup.select('div.product-card.j-card-item.j-good-for-listing-event')
         for block in container:
             self.parse_block(block=block)
 
